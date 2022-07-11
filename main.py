@@ -28,7 +28,7 @@ def func(message):
         button1 = types.KeyboardButton("Магазин🧦👟🕶️")
         button2 = types.KeyboardButton("🏃Соревнования🏃")
         markup.add(button1, button2, )
-        bot.send_message(message.chat.id, text="{0.first_name} Чем могу помочь?".format(message.from_user),reply_markup=markup)
+        bot.send_message(message.chat.id, text="{0.first_name} Чем могу помочь? Выберите нужный пункт из меню".format(message.from_user),reply_markup=markup)
 
     elif (message.text == "Магазин🧦👟🕶️"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -231,7 +231,7 @@ def func(message):
         markup.add(button1, button2, )
         bot.send_message(message.chat.id, text="{0.first_name}! Чем могу помочь?".format(message.from_user),reply_markup=markup)
     else:
-        bot.send_message(message.chat.id, text="Так долеко еще не кто не заходил..")
+        bot.send_message(message.chat.id, text="Пожалуйста выберите существующий раздел, в меню кнопок")
 
 while True:
     try:
