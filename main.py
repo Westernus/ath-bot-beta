@@ -233,5 +233,8 @@ def func(message):
     else:
         bot.send_message(message.chat.id, text="Так долеко еще не кто не заходил..")
 
-
-bot.polling(none_stop=True)
+while True:
+    try:
+        bot.polling(none_stop=True)
+    except:
+        continue
