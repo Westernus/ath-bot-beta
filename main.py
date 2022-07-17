@@ -1,5 +1,8 @@
 import telebot
 from telebot import types
+import os
+
+os.system('python filename.py')
 
 
 bot = telebot.TeleBot("5456172758:AAGwQOy_GtNRjmCigMSEjCm1utWXG4Mewmc")
@@ -20,8 +23,6 @@ def func(message):
     if (message.text == "Как зарегистрироваться📝?"):
         bot.send_message(message.chat.id,text="Для регистрации на мероприятие необходимо открыть интересующее Вас мероприятие на сайте www.athletex.kz и ознакомиться с положением соревнований, После этого нажать внизу страницы кнопку (Зарегистрироваться). Далее открыть (корзину), и нажать кнопку (Оплатить)")
 
-    elif (message.text == "Казахский"):
-        bot.send_message(message.chat.id,"Бұл бөлім әзірленуде")
 
     elif (message.text == "Русский"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -34,7 +35,7 @@ def func(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("Магазин Athletex Shop")
         btn2 = types.KeyboardButton("Режим работы⏰")
-        btn3 = types.KeyboardButton("Место положение Athletex Shop🌍🔍")
+        btn3 = types.KeyboardButton("Местоположение Athletex Shop🌍🔍")
         btn4 = types.KeyboardButton("Контакты☎")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(btn1, btn2, btn3, btn4, back)
@@ -46,17 +47,26 @@ def func(message):
         button2 = types.KeyboardButton("Регистрация")
         button3 = types.KeyboardButton("Результаты🏅")
         button4 = types.KeyboardButton("Партнерам")
-        button5 = types.KeyboardButton("Волонтерам")
+        button5 = types.KeyboardButton("Стать волонтером")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(button1, button2, button3, button4, button5, back)
         bot.send_message(message.chat.id, text="Информация по соревнованиям",reply_markup=markup)
 
-    elif (message.text == "Волонтерам"):
-        bot.send_message(message.chat.id, "Чем занимаются волонтеры на соревнованиях?")
-        bot.send_message(message.chat.id, "Работа волонтеров начинается задолго до старта соревнований. Они изучают и размечают трассу, формируют и выдают стартовые пакеты, заранее выезжают на место проведения соревнований, чтобы подготовить все к прибытию участников.")
-        bot.send_message(message.chat.id, "Во время проведения соревнования так же полно задач. Это поддержка участников на пунктах питания, контроль за безопасностью и обеспечение работы контрольных пунктов на трассе, судейство и вручение медалей финишерам. В зависимости от условий соревнования список задач может дополняться.")
-        bot.send_message(message.chat.id, "Если вы хотите стать волонтером то свяжитесь с нами по телефону")
-        bot.send_message(message.chat.id, "+77014100510")
+    elif (message.text == "Стать волонтером"):
+        bot.send_message(message.chat.id, "Хочешь быть полезным? ")
+        bot.send_message(message.chat.id, "Влиться в спортивную тусовку? ")
+        bot.send_message(message.chat.id, "Узнать всю кухню организации спортивных соревнований изнутри? ")
+        bot.send_message(message.chat.id, "Чаще  выезжать на природу? ")
+        bot.send_message(message.chat.id, "Получать слоты на соревнования не за деньги? ")
+        bot.send_message(message.chat.id, "Участвовать даже если сам не можешь бежать?")
+        bot.send_message(message.chat.id, "Да? Становись волонтером Экстремальной Атлетики!")
+        bot.send_message(message.chat.id, "Тебя ждет: ")
+        bot.send_message(message.chat.id, "Дружная позитивная команда; ")
+        bot.send_message(message.chat.id, "Интересные и понятные задачи;")
+        bot.send_message(message.chat.id, "Новые люди, интересные знакомства и новые места;")
+        bot.send_message(message.chat.id, "и многое другое!")
+        bot.send_message(message.chat.id, "Решился? Звони/пиши на номер: +77014100510,")
+        bot.send_message(message.chat.id, "Следующее соревнование не за горами!")
 
     elif (message.text == "Партнерам"):
         markup = types.InlineKeyboardMarkup()
@@ -202,16 +212,16 @@ def func(message):
         markup.add(types.InlineKeyboardButton("Перейти на сайт", url="https://athletex.kz/competitions"))
         bot.send_message(message.chat.id, text="Календарь событий", reply_markup=markup)
 
-    elif (message.text == "Место положение Athletex Shop🌍🔍"):
+    elif (message.text == "Местоположение Athletex Shop🌍🔍"):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("2Gis", url="https://2gis.kz/almaty/firm/70000001032749432"))
-        bot.send_message(message.chat.id, text="Место положение", reply_markup=markup)
+        bot.send_message(message.chat.id, text="Местоположение", reply_markup=markup)
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("Яндекс Карты", url="https://yandex.kz/maps/162/almaty/house/Y08Yfg9gT0YDQFppfX51cX1gZg==/?ll=76.880633%2C43.240132&z=17"))
-        bot.send_message(message.chat.id, text="Место положение", reply_markup=markup)
+        bot.send_message(message.chat.id, text="Местоположение", reply_markup=markup)
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("Google maps", url="https://www.google.com/maps/place/%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A2%D1%83%D1%80%D0%BA%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0+208,+%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B+050000/@43.2400987,76.8783921,17z/data=!3m1!4b1!4m5!3m4!1s0x388369c5170d5c33:0x40192730afc01c6d!8m2!3d43.2400987!4d76.8805808?shorturl=1"))
-        bot.send_message(message.chat.id, text="Место положение", reply_markup=markup)
+        bot.send_message(message.chat.id, text="Местоположение", reply_markup=markup)
 
     elif (message.text == "Режим работы⏰"):
         photo = open('img2.jpeg', 'rb')
