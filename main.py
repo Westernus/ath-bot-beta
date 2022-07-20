@@ -276,8 +276,7 @@ def func(message):
     elif (message.text == "Volunteer"):
         bot.send_message(message.chat.id, "Do you want to be useful?  ")
         bot.send_message(message.chat.id, "Join the sports crowd?  ")
-        bot.send_message(message.chat.id,
-                         "Find out the whole kitchen of the organization of sports competitions from the inside?  ")
+        bot.send_message(message.chat.id,"Find out the whole kitchen of the organization of sports competitions from the inside?  ")
         bot.send_message(message.chat.id, "Go out into nature more often?   ")
         bot.send_message(message.chat.id, "Get slots for competitions for your efforts?  ")
         bot.send_message(message.chat.id, "Participate even if you can't run yourself?")
@@ -293,7 +292,7 @@ def func(message):
     elif (message.text == "Partners"):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("go", url="https://athletex.kz/presentation/event.pdf ()"))
-        bot.send_message(message.chat.id, text="Если Вы хотите стать нашими партнерами, свяжитесь с нами по  телефону",reply_markup=markup)
+        bot.send_message(message.chat.id, text="If you want to be our partners, please contact us:",reply_markup=markup)
         bot.send_message(message.chat.id, text="+7 705 602 42 49")
 
     elif (message.text == "Registration"):
@@ -513,7 +512,7 @@ def func(message):
     elif (message.text == "Серіктестер үшін"):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("Перейти", url="https://athletex.kz/presentation/event.pdf ()"))
-        bot.send_message(message.chat.id, text="Если Вы хотите стать нашими партнерами, свяжитесь с нами по  телефону",
+        bot.send_message(message.chat.id, text="Біздің серіктесіміз болғыңыз келсе төмендегі телефон арқылы хабарласыңыз",
                          reply_markup=markup)
         bot.send_message(message.chat.id, text="+7 705 602 42 49")
 
@@ -643,7 +642,7 @@ def func(message):
         bot.send_message(message.chat.id,"Төлегеннен кейін жарыс бетіндегі қатысушылар тізімінен қашықтықты тексеріңіз. Егер қандай да бір себептермен ол өзгермесе, бізге tengriultra@gmail.com поштасы арқылы хабарласыңыз ")
 
     elif (message.text == "Нәтижелер🏅"):
-        bot.send_message(message.chat.id,"Зайдите на страницу уже завершенного соревнования и прокрутите её вниз до конца - там вы увидите большую красную кнопку [РЕЗУЛЬТАТЫ]. После нажатия Вас перенаправит на страницу финишного протокола.")
+        bot.send_message(message.chat.id,"Аяқталған байқаудың бетіне өтіп, төменге қарай жылжыңыз - сол жерде үлкен қызыл [НӘТИЖЕЛЕР] түймешігін көресіз. Осы түймешекті басқаннан кейін сіз нәтижелер туралы есеп бетіне бағытталасыз.")
 
     elif (message.text == "Дүкен Athletex Shop"):
         markup = types.InlineKeyboardMarkup()
@@ -674,7 +673,7 @@ def func(message):
     elif (message.text == "Тіркелуім сәтті өтті ме?"):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("CallCenter, Колл Центр", url="https://web.telegram.org/z/#677006359"))
-        bot.send_message(message.chat.id,text="Проверьте свою фамилию в списке участников на страничке соревнования на athletex.kz Если Вы себя нашли - это значит регистрация прошла успешно. Если нет, то регистрация не завершена, обратитесь к консультанту по номеру +77056024249 (рус, eng) +77767373667 (рус, каз)",reply_markup=markup)
+        bot.send_message(message.chat.id,text="Аthletex.kz сайтындағы жарыс бетіндегі қатысушылар тізімінен өз аты-жөніңізді тексеріңіз. Егер сіз өзіңізді тапсаңыз, тіркеуді сәтті өттіңіз дегенді білдіреді. Ал егер табылмаса, тіркелуіңіз аяқталмаған, ол үшін кеңесшіге хабарласыңыз: +77056024249 (орыс және ағылшын тілінде), +77767373667 (орыс және қазақ тілінде)" ,reply_markup=markup)
         bot.send_message(message.chat.id, "( звонок/ ватсап/ телеграмм )")
 
     elif (message.text == "👈Артқа оралу"):
