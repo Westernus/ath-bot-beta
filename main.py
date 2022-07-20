@@ -1,8 +1,5 @@
 import telebot
 from telebot import types
-import os
-
-os.system('python filename.py')
 
 
 bot = telebot.TeleBot("5302098913:AAHXMROYNHDlU7YMFBpxPIpm97TVuFGZkrc")
@@ -470,7 +467,7 @@ def func(message):
         bot.send_message(message.chat.id,text="{0.first_name} Сізге қандай көмек көрсете аламын? Мәзірден қажетті элементті таңдаңыз".format(message.from_user), reply_markup=markup)
 
     elif (message.text == "Қалай тіркелуге болады📝?"):
-        bot.send_message(message.chat.id,text="Для регистрации на мероприятие необходимо открыть интересующее Вас мероприятие на сайте www.athletex.kz и ознакомиться с положением соревнований, После этого нажать внизу страницы кнопку (Зарегистрироваться). Далее открыть (корзину), и нажать кнопку (Оплатить)")
+        bot.send_message(message.chat.id,text="Өтілетін іс-шараға тіркелу үшін www.athletex.kz  сайтында сізді қызықтыратын іс-шараны ашып, жарыстың ережесімен танысу қажет. Одан кейін беттің төменгі жағындағы (Тіркелу) түймесін басыңыз. Содан кейін (себетті) ашып, (Төлеу) түймесін басыңыз.")
 
     elif (message.text == "Дүкен🧦👟🕶️"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -647,7 +644,7 @@ def func(message):
     elif (message.text == "Дүкен Athletex Shop"):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("Перейти на сайт", url="https://athletex.kz/shop"))
-        bot.send_message(message.chat.id, text="Магазин спорт товаров Athletex Shop", reply_markup=markup)
+        bot.send_message(message.chat.id, text="Спорт тауарлары дүкені Athletex Shop", reply_markup=markup)
 
     elif (message.text == "Күнтізбе🗓"):
         markup = types.InlineKeyboardMarkup()
@@ -668,7 +665,7 @@ def func(message):
     elif (message.text == "Жұмыс уақыты⏰"):
         photo = open('img2.jpeg', 'rb')
         bot.send_photo(message.chat.id, photo)
-        bot.send_message(message.chat.id,"Пожалуйста, заранее узнавайте часы работы магазина в выходные и праздничные дни.")
+        bot.send_message(message.chat.id,"Демалыс және мереке күндері дүкеннің жұмыс уақытын алдын ала анықтап алыңыз.")
 
     elif (message.text == "Тіркелуім сәтті өтті ме?"):
         markup = types.InlineKeyboardMarkup()
