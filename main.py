@@ -2,8 +2,7 @@ import telebot
 from telebot import types
 
 
-token = ("5456172758:AAGwQOy_GtNRjmCigMSEjCm1utWXG4Mewmc")
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot("5456172758:AAGwQOy_GtNRjmCigMSEjCm1utWXG4Mewmc")
 
 
 @bot.message_handler(commands=['start'])
@@ -22,9 +21,17 @@ def func(message):
     if (message.text == "Как зарегистрироваться📝?"):
         bot.send_message(message.chat.id,text="Для регистрации на мероприятие необходимо открыть интересующее Вас мероприятие на сайте www.athletex.kz и ознакомиться с положением соревнований, После этого нажать внизу страницы кнопку (Зарегистрироваться). Далее открыть (корзину), и нажать кнопку (Оплатить)")
 
-    # elif (message.text == "vid"):
-    #     with open('video.mp4', 'rb') as f1:
-    #         bot.send_video(message.chat.id, f1)
+    elif (message.text == "Как зарегистрироваться📝?"):
+        with open('video.mp4', 'rb') as f1:
+         bot.send_video(message.chat.id, f1)
+
+    elif (message.text == "How to register📝?"):
+        with open('video.mp4', 'rb') as f1:
+         bot.send_video(message.chat.id, f1)
+
+    elif (message.text == "Қалай тіркелуге болады📝?"):
+        with open('video.mp4', 'rb') as f1:
+         bot.send_video(message.chat.id, f1)
 
     elif (message.text == "Русский"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
