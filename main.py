@@ -2,7 +2,9 @@ import telebot
 from telebot import types
 
 
-bot = telebot.TeleBot("5456172758:AAGwQOy_GtNRjmCigMSEjCm1utWXG4Mewmc")
+token = ("5302098913:AAHXMROYNHDlU7YMFBpxPIpm97TVuFGZkrc")
+bot = telebot.TeleBot(token)
+
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -15,12 +17,14 @@ def start(message):
     bot.send_message(message.chat.id, text="Сәлем {0.first_name}! Тіліңізді таңдаңыз".format(message.from_user) ,reply_markup=markup)
     bot.send_message(message.chat.id, text="Hello {0.first_name}! Choose your language".format(message.from_user) ,reply_markup=markup)
 
-
 @bot.message_handler(content_types=['text'])
 def func(message):
     if (message.text == "Как зарегистрироваться📝?"):
         bot.send_message(message.chat.id,text="Для регистрации на мероприятие необходимо открыть интересующее Вас мероприятие на сайте www.athletex.kz и ознакомиться с положением соревнований, После этого нажать внизу страницы кнопку (Зарегистрироваться). Далее открыть (корзину), и нажать кнопку (Оплатить)")
 
+    # elif (message.text == "vid"):
+    #     with open('video.mp4', 'rb') as f1:
+    #         bot.send_video(message.chat.id, f1)
 
     elif (message.text == "Русский"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -180,7 +184,7 @@ def func(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton("Забыл пароль")
         button2 = types.KeyboardButton("Создать личный кабинет")
-        button3 = types.KeyboardButton("Как зарегистрироваться")
+        button3 = types.KeyboardButton("Как зарегистрироваться📝?")
         button4 = types.KeyboardButton("Успешно ли я зарегистрировался?")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(button1, button2, button3, button4, back)
@@ -446,7 +450,7 @@ def func(message):
         bot.send_photo(message.chat.id, photo)
         bot.send_message(message.chat.id, "Please check the store's opening hours on weekends and holidays in advance.")
 
-    elif (message.text == "Did I register successfully?"):
+    elif (message.text == "Have I successfully registered?"):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("CallCenter, Колл Центр", url="https://web.telegram.org/z/#677006359"))
         bot.send_message(message.chat.id,text="Check your name in the list of participants on the competition page at athletex.kz  If you found yourself, it means that the registration was successful.  If not, then the registration is not completed, contact the consultant at phone/WhatsApp/ Telegram +77056024249 (rus, eng) +77767373667 (rus, kaz)",reply_markup=markup)
@@ -526,8 +530,8 @@ def func(message):
 
     elif (message.text == "Төлем мәселесі?💰"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton(" Төлем картасы Қазақстан банкінің картасы💳")
-        button2 = types.KeyboardButton(" Төлем картасы Қазақстан банкінің картасы емес💳")
+        button1 = types.KeyboardButton("Төлем картасы Қазақстан банкінің картасы💳")
+        button2 = types.KeyboardButton("Төлем картасы Қазақстан банкінің картасы емес💳")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(button1, button2, back)
         bot.send_message(message.chat.id, text="Помощь по оплате", reply_markup=markup)
@@ -535,13 +539,13 @@ def func(message):
     elif (message.text == "Ары қарай"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("Қатысудан бас тарту")
-        btn2 = types.KeyboardButton("Трансфер")
+        btn2 = types.KeyboardButton("Трансфер.")
         btn3 = types.KeyboardButton("Қажетті жауап табылмады")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(btn1, btn2, btn3, back)
         bot.send_message(message.chat.id, text="👉", reply_markup=markup)
 
-    elif (message.text == "Трансфер"):
+    elif (message.text == "Трансфер."):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("Автобустың жөнелтілетін орны мен уақытын қалай білуге ​​болады?")
         btn2 = types.KeyboardButton("Трансферді қалай сатып алуға болады?")
@@ -627,10 +631,10 @@ def func(message):
         markup.add(button1, button2, button3, button4, back)
         bot.send_message(message.chat.id, text="Тіркелу бойынша көмек", reply_markup=markup)
 
-    elif (message.text == " Төлем картасы Қазақстан банкінің картасы емес💳"):
+    elif (message.text == "Төлем картасы Қазақстан банкінің картасы емес💳"):
         bot.send_message(message.chat.id,"Төлем кезінде қате орын алса, бұл мәселені шешу үшін бізге пошта арқылы хабарласыңыз (tengriultra@gmail.com)")
 
-    elif (message.text == " Төлем картасы Қазақстан банкінің картасы💳"):
+    elif (message.text == "Төлем картасы Қазақстан банкінің картасы💳"):
         bot.send_message(message.chat.id,"Сізде онлайн сатып алу шектеулері немесе банкке қатысты басқа мәселелер бар-жоғын тексеріңіз")
 
     elif (message.text == "Қашықтықты ауыстыру"):
@@ -678,7 +682,7 @@ def func(message):
         button1 = types.KeyboardButton("Дүкен🧦👟🕶️")
         button2 = types.KeyboardButton("🏃Жарыстар🏃")
         markup.add(button1, button2, )
-        bot.send_message(message.chat.id, text="{0.first_name}Выберите нужный пункт из меню".format(message.from_user),reply_markup=markup)
+        bot.send_message(message.chat.id, text="{0.first_name} Выберите нужный пункт из меню".format(message.from_user),reply_markup=markup)
 
     else:
         bot.send_message(message.chat.id, text="Пожалуйста выберите существующий раздел, в меню кнопок")
