@@ -171,10 +171,35 @@ def func(message):
         btn3 = types.KeyboardButton("Проблема с регистрацией")
         btn4 = types.KeyboardButton("Проблема с оплатой?💰")
         btn5 = types.KeyboardButton("Не могу найти себя в списке участников")
-        btn6 = types.KeyboardButton("Далее")
+        btn6 = types.KeyboardButton("Перерегистрация📝")
+        btn7 = types.KeyboardButton("Далее")
         back = types.KeyboardButton("👈Вернуться назад")
-        markup.add(button2, btn3, btn4, btn5, btn6, back)
+        markup.add(button2, btn3, btn4, btn5, btn6, btn7, back)
         bot.send_message(message.chat.id, text="Помощь по регистрации",reply_markup=markup)
+
+    elif (message.text == "Bидео"):
+        with open('IMG_6934.MP4', 'rb') as f1:
+         bot.send_video(message.chat.id, f1)
+
+    elif (message.text == "Создать личный кабинет"):
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton("Teкcт")
+        button2 = types.KeyboardButton("Bидео")
+        button3 = types.KeyboardButton("👈Назaд")
+        markup.add(button1, button2, button3, )
+        bot.send_message(message.chat.id,text="{0.first_name} Выберите что для вас будет удобнее".format(message.from_user),reply_markup=markup)
+
+    elif (message.text == "👈Назaд"):
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button2 = types.KeyboardButton("Смена дистанции")
+        btn3 = types.KeyboardButton("Проблема с регистрацией")
+        btn4 = types.KeyboardButton("Проблема с оплатой?💰")
+        btn5 = types.KeyboardButton("Не могу найти себя в списке участников")
+        btn6 = types.KeyboardButton("Перерегистрация📝")
+        btn7 = types.KeyboardButton("Далее")
+        back = types.KeyboardButton("👈Вернуться назад")
+        markup.add(button2, btn3, btn4, btn5, btn6, btn7, back)
+        bot.send_message(message.chat.id, text="Помощь по регистрации", reply_markup=markup)
 
     elif (message.text == "Проблема с оплатой?💰"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -245,7 +270,7 @@ def func(message):
     elif (message.text == "Как узнать место и время отправления автобуса?"):
         bot.send_message(message.chat.id,"Время и место отправления указаны в вашем ваучере")
 
-    elif (message.text == "Перерегистрация📝"):
+    elif (message.text == "Teкcт"):
         bot.send_message(message.chat.id, "Для перерегистраци с одного участника на другого, напишите нам на почту (tengriultra@gmail.com)")
 
     elif (message.text == "Забыл пароль"):
