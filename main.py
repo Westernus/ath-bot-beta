@@ -181,7 +181,7 @@ def func(message):
         with open('IMG_6934.MP4', 'rb') as f1:
          bot.send_video(message.chat.id, f1)
 
-    elif (message.text == "Создать личный кабинет"):
+    elif (message.text == "Перерегистрация📝"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton("Teкcт")
         button2 = types.KeyboardButton("Bидео")
