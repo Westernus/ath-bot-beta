@@ -51,6 +51,18 @@ def func(message):
         markup.add(button1, button2, button3, )
         bot.send_message(message.chat.id,text="{0.first_name} Выберите что для вас будет удобнее".format(message.from_user),reply_markup=markup)
 
+    elif (message.text == "Videо"):
+        with open ('Video1.mp4', 'rb') as f1:
+         bot.send_video(message.chat.id, f1)
+
+    elif (message.text == "Create a personal account"):
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton("Тext")
+        button2 = types.KeyboardButton("Videо")
+        button3 = types.KeyboardButton("👈Skip")
+        markup.add(button1, button2, button3, )
+        bot.send_message(message.chat.id,text="{0.first_name} Выберите что для вас будет удобнее".format(message.from_user),reply_markup=markup)
+
 
     elif (message.text == "Текст"):
         bot.send_message(message.chat.id,"Для регистрации на мероприятие необходимо открыть интересующее Вас мероприятие на сайте www.athletex.kz и ознакомиться с положением соревнований, После этого нажать внизу страницы кнопку (Зарегистрироваться). Далее открыть (корзину), и нажать кнопку (Оплатить)")
@@ -459,7 +471,7 @@ def func(message):
     elif (message.text == "Forgot my password"):
         bot.send_message(message.chat.id,"Click the button [FORGOT PASSWORD / ЗАБЫЛ ПАРОЛЬ], then enter your e-mail address to which you have registered your personal account, and click [OK]. After that, you will receive an email with a password reset button [Reset password] to the specified email. Click this button. When a special window opens, you need to enter your email and a new password (twice). Remember this password and use it to log in to your account later.")
 
-    elif (message.text == "Create a personal account"):
+    elif (message.text == "Тext"):
         bot.send_message(message.chat.id,"To create your account on this site, you need to: Click on the black head icon on the top right - [create a personal account/ создать личный кабинет]")
         bot.send_message(message.chat.id, "Fill in all the fields and click [register]..")
         bot.send_message(message.chat.id,"After that, go to the section (personal information/ персональная информация) and fill in all the fields there. ")
