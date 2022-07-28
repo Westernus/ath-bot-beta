@@ -25,8 +25,19 @@ def func(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton("Текст")
         button2 = types.KeyboardButton("Видео")
-        markup.add(button1, button2, )
+        button3 = types.KeyboardButton("👈Назад")
+        markup.add(button1, button2, button3, )
         bot.send_message(message.chat.id, text="{0.first_name} Выберите что для вас будет удобнее".format(message.from_user),reply_markup=markup)
+
+    elif (message.text == "👈Назад"):
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton("Забыл пароль")
+        button2 = types.KeyboardButton("Создать личный кабинет")
+        button3 = types.KeyboardButton("Как зарегистрироваться📝?")
+        button4 = types.KeyboardButton("Успешно ли я зарегистрировался?")
+        back = types.KeyboardButton("👈Вернуться назад")
+        markup.add(button1, button2, button3, button4, back)
+        bot.send_message(message.chat.id, text="Помощь по регистрации",reply_markup=markup)
 
     elif (message.text == "Текст"):
         bot.send_message(message.chat.id,"Для регистрации на мероприятие необходимо открыть интересующее Вас мероприятие на сайте www.athletex.kz и ознакомиться с положением соревнований, После этого нажать внизу страницы кнопку (Зарегистрироваться). Далее открыть (корзину), и нажать кнопку (Оплатить)")
@@ -35,13 +46,49 @@ def func(message):
         with open('video.mp4', 'rb') as f1:
          bot.send_video(message.chat.id, f1)
 
+    elif (message.text == "Video"):
+        with open('video.mp4', 'rb') as f1:
+         bot.send_video(message.chat.id, f1)
+
     elif (message.text == "How to register📝?"):
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton("Text")
+        button2 = types.KeyboardButton("Video")
+        button3 = types.KeyboardButton("👈Skip")
+        markup.add(button1, button2, button3, )
+        bot.send_message(message.chat.id, text="{0.first_name}".format(message.from_user),reply_markup=markup)
+
+    elif (message.text == "👈Skip"):
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton("Forgot my password")
+        button2 = types.KeyboardButton("Create a personal account")
+        button3 = types.KeyboardButton("How to register📝?")
+        button4 = types.KeyboardButton("Have I successfully registered?")
+        back = types.KeyboardButton("👈Back")
+        markup.add(button1, button2, button3, button4, back)
+        bot.send_message(message.chat.id, text="Registration assistance", reply_markup=markup)
+
+    elif (message.text == "Бейне"):
         with open('video.mp4', 'rb') as f1:
          bot.send_video(message.chat.id, f1)
 
     elif (message.text == "Қалай тіркелуге болады📝?"):
-        with open('video.mp4', 'rb') as f1:
-         bot.send_video(message.chat.id, f1)
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton("Мәтін")
+        button2 = types.KeyboardButton("Бейне")
+        button3 = types.KeyboardButton("👈  Артқа")
+        markup.add(button1, button2, button3, )
+        bot.send_message(message.chat.id, text="{0.first_name} Сізге не ыңғайлы екенін таңдаңыз".format(message.from_user),reply_markup=markup)
+
+    elif (message.text == "👈  Артқа"):
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton("Құпия сөзді ұмыттым")
+        button2 = types.KeyboardButton("Жеке кабинет ашу")
+        button3 = types.KeyboardButton("Қалай тіркелуге болады📝?")
+        button4 = types.KeyboardButton("Тіркелуім сәтті өтті ме?")
+        back = types.KeyboardButton("👈Артқа оралу")
+        markup.add(button1, button2, button3, button4, back)
+        bot.send_message(message.chat.id, text="Тіркелу бойынша көмек", reply_markup=markup)
 
     elif (message.text == "Русский"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -267,7 +314,7 @@ def func(message):
         markup.add(button1, button2, )
         bot.send_message(message.chat.id, text="{0.first_name} How can we help you? Select the desired item in the menu ".format(message.from_user), reply_markup=markup)
 
-    elif (message.text == "How to register📝?"):
+    elif (message.text == "Text"):
         bot.send_message(message.chat.id,text="To register, you need to open the page of the competition you are interested in our website www.athletex.kz First read the section (regulations/положение), After that, click the button (Register/Зарегистрироваться) at the bottom of the page.  Next, open (cart/корзина), choose distance you need and click the button (Pay/Оплатить)")
 
     elif (message.text == "Shop🧦👟🕶️"):
@@ -421,7 +468,7 @@ def func(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton("Forgot my password")
         button2 = types.KeyboardButton("Create a personal account")
-        button3 = types.KeyboardButton("How to register")
+        button3 = types.KeyboardButton("How to register📝?")
         button4 = types.KeyboardButton("Have I successfully registered?")
         back = types.KeyboardButton("👈Back")
         markup.add(button1, button2, button3, button4, back)
@@ -626,7 +673,7 @@ def func(message):
         bot.send_message(message.chat.id,"Осыдан кейін (жеке ақпарат)  бөліміне өтіп, тағы бірнеше орындарды толтырыңыз. ")
         bot.send_message(message.chat.id,"Толтырылуы керек ақпарат көп емес және олар мәре хаттамасында сіз туралы ақпаратты дұрыс көрсету үшін өте маңызды.")
 
-    elif (message.text == "Қалай тіркелуге болады"):
+    elif (message.text == "Мәтін"):
         bot.send_message(message.chat.id, "Тіркелу үшін:")
         bot.send_message(message.chat.id, "Жоғарғы сол жақтағы екі жолақты басыңыз.")
         bot.send_message(message.chat.id,"[Біздің оқиғалар] түймесін басыңыз - қажетті жарысты таңдаңыз - [қатысу] түймесін басыңыз.")
@@ -642,7 +689,7 @@ def func(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton("Құпия сөзді ұмыттым")
         button2 = types.KeyboardButton("Жеке кабинет ашу")
-        button3 = types.KeyboardButton("Қалай тіркелуге болады")
+        button3 = types.KeyboardButton("Қалай тіркелуге болады📝?")
         button4 = types.KeyboardButton("Тіркелуім сәтті өтті ме?")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(button1, button2, button3, button4, back)
