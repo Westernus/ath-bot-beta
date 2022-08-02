@@ -1,5 +1,6 @@
 import telebot
 from telebot import types
+import tg_analytic
 
 
 bot = telebot.TeleBot("5456172758:AAGwQOy_GtNRjmCigMSEjCm1utWXG4Mewmc")
@@ -27,6 +28,7 @@ def func(message):
         button2 = types.KeyboardButton("Видео")
         button3 = types.KeyboardButton("👈Назад")
         markup.add(button1, button2, button3, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="{0.first_name} Выберите что для вас будет удобнее".format(message.from_user),reply_markup=markup)
 
     elif (message.text == "👈Назад"):
@@ -37,6 +39,7 @@ def func(message):
         button4 = types.KeyboardButton("Успешно ли я зарегистрировался?")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(button1, button2, button3, button4, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Помощь по регистрации",reply_markup=markup)
 
     elif (message.text == "Видеo"):
@@ -49,6 +52,7 @@ def func(message):
         button2 = types.KeyboardButton("Видеo")
         button3 = types.KeyboardButton("👈Назад")
         markup.add(button1, button2, button3, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id,text="{0.first_name} Выберите что для вас будет удобнее".format(message.from_user),reply_markup=markup)
 
     elif (message.text == "Videо"):
@@ -61,6 +65,7 @@ def func(message):
         button2 = types.KeyboardButton("Videо")
         button3 = types.KeyboardButton("👈Skip")
         markup.add(button1, button2, button3, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id,text="{0.first_name} Выберите что для вас будет удобнее".format(message.from_user),reply_markup=markup)
 
 
@@ -81,6 +86,7 @@ def func(message):
         button2 = types.KeyboardButton("Video")
         button3 = types.KeyboardButton("👈Skip")
         markup.add(button1, button2, button3, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="{0.first_name}".format(message.from_user),reply_markup=markup)
 
     elif (message.text == "👈Skip"):
@@ -91,6 +97,7 @@ def func(message):
         button4 = types.KeyboardButton("Have I successfully registered?")
         back = types.KeyboardButton("👈Back")
         markup.add(button1, button2, button3, button4, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Registration assistance", reply_markup=markup)
 
     elif (message.text == "Бейне"):
@@ -103,6 +110,7 @@ def func(message):
         button2 = types.KeyboardButton("Бейне")
         button3 = types.KeyboardButton("👈  Артқа")
         markup.add(button1, button2, button3, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="{0.first_name} Сізге не ыңғайлы екенін таңдаңыз".format(message.from_user),reply_markup=markup)
 
     elif (message.text == "👈  Артқа"):
@@ -113,6 +121,7 @@ def func(message):
         button4 = types.KeyboardButton("Тіркелуім сәтті өтті ме?")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(button1, button2, button3, button4, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Тіркелу бойынша көмек", reply_markup=markup)
 
     elif (message.text == "Русский"):
@@ -120,6 +129,7 @@ def func(message):
         button1 = types.KeyboardButton("Магазин🧦👟🕶️")
         button2 = types.KeyboardButton("🏃Соревнования🏃")
         markup.add(button1, button2, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="{0.first_name} Чем могу помочь? Выберите нужный пункт из меню".format(message.from_user),reply_markup=markup)
 
     elif (message.text == "Магазин🧦👟🕶️"):
@@ -130,6 +140,7 @@ def func(message):
         btn4 = types.KeyboardButton("Контакты☎")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(btn1, btn2, btn3, btn4, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Информация по магазину", reply_markup=markup)
 
     elif (message.text == "🏃Соревнования🏃"):
@@ -141,6 +152,7 @@ def func(message):
         button5 = types.KeyboardButton("Стать волонтером")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(button1, button2, button3, button4, button5, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Информация по соревнованиям",reply_markup=markup)
 
     elif (message.text == "Стать волонтером"):
@@ -174,6 +186,7 @@ def func(message):
         btn6 = types.KeyboardButton("Перерегистрация📝")
         btn7 = types.KeyboardButton("Далее")
         back = types.KeyboardButton("👈Вернуться назад")
+        tg_analytic.statistics(message.chat.id, message.text)
         markup.add(button2, btn3, btn4, btn5, btn6, btn7, back)
         bot.send_message(message.chat.id, text="Помощь по регистрации",reply_markup=markup)
 
@@ -187,6 +200,7 @@ def func(message):
         button2 = types.KeyboardButton("Bидео")
         button3 = types.KeyboardButton("👈Назaд")
         markup.add(button1, button2, button3, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id,text="{0.first_name} Выберите что для вас будет удобнее".format(message.from_user),reply_markup=markup)
 
     elif (message.text == "👈Назaд"):
@@ -199,6 +213,7 @@ def func(message):
         btn7 = types.KeyboardButton("Далее")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(button2, btn3, btn4, btn5, btn6, btn7, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Помощь по регистрации", reply_markup=markup)
 
     elif (message.text == "Проблема с оплатой?💰"):
@@ -207,6 +222,7 @@ def func(message):
         button2 = types.KeyboardButton("Карта НЕ Казахстанского банка💳")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(button1, button2, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Помощь по оплате", reply_markup=markup)
 
     elif (message.text == "Далее"):
@@ -216,6 +232,7 @@ def func(message):
         btn3 = types.KeyboardButton("НЕ нашли ответа?")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(btn1, btn2, btn3, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="👉", reply_markup=markup)
 
     elif (message.text == "Трансфер"):
@@ -228,6 +245,7 @@ def func(message):
         btn6 = types.KeyboardButton("Перерегистрация трансфера на другого человека")
         back = types.KeyboardButton("👈 Назад")
         markup.add(btn1, btn2, btn3, btn4, btn5, btn6, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="🚌", reply_markup=markup)
 
     elif (message.text == "👈 Назад"):
@@ -237,6 +255,7 @@ def func(message):
         btn3 = types.KeyboardButton("НЕ нашли ответа?")
         back = types.KeyboardButton("👈Вернуться назад")
         markup.add(btn1, btn2, btn3, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="👉", reply_markup=markup)
 
     elif (message.text == "Контакты☎"):
@@ -355,6 +374,7 @@ def func(message):
         button1 = types.KeyboardButton("Магазин🧦👟🕶️")
         button2 = types.KeyboardButton("🏃Соревнования🏃")
         markup.add(button1, button2, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="{0.first_name}! Чем могу помочь?".format(message.from_user),reply_markup=markup)
 
     elif (message.text == "English"):
@@ -362,6 +382,7 @@ def func(message):
         button1 = types.KeyboardButton("Shop🧦👟🕶️")
         button2 = types.KeyboardButton("🏃Competitions🏃")
         markup.add(button1, button2, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="{0.first_name} How can we help you? Select the desired item in the menu ".format(message.from_user), reply_markup=markup)
 
     elif (message.text == "Text"):
@@ -375,6 +396,7 @@ def func(message):
         btn4 = types.KeyboardButton("Contacts☎")
         back = types.KeyboardButton("👈Back")
         markup.add(btn1, btn2, btn3, btn4, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Shop Information", reply_markup=markup)
 
     elif (message.text == "🏃Competitions🏃"):
@@ -386,6 +408,7 @@ def func(message):
         button5 = types.KeyboardButton("Volunteer")
         back = types.KeyboardButton("👈Back")
         markup.add(button1, button2, button3, button4, button5, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Competition Information", reply_markup=markup)
 
     elif (message.text == "Volunteer"):
@@ -419,6 +442,7 @@ def func(message):
         btn6 = types.KeyboardButton("Next")
         back = types.KeyboardButton("👈Back")
         markup.add(button2, btn3, btn4, btn5, btn6, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Registration assistance", reply_markup=markup)
 
     elif (message.text == "Payment problem💰"):
@@ -427,6 +451,7 @@ def func(message):
         button2 = types.KeyboardButton("NON-Kazakhstan bank card  💳")
         back = types.KeyboardButton("👈Back")
         markup.add(button1, button2, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Payment problem�", reply_markup=markup)
 
     elif (message.text == "Next"):
@@ -436,6 +461,7 @@ def func(message):
         btn3 = types.KeyboardButton("Didn't find an answer?")
         back = types.KeyboardButton("👈Back")
         markup.add(btn1, btn2, btn3, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="👉", reply_markup=markup)
 
     elif (message.text == "Transfer"):
@@ -448,6 +474,7 @@ def func(message):
         btn6 = types.KeyboardButton("Change of a transfer ticket to another person")
         back = types.KeyboardButton("👈Return")
         markup.add(btn1, btn2, btn3, btn4, btn5, btn6, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="🚌", reply_markup=markup)
 
     elif (message.text == "👈Return"):
@@ -457,6 +484,7 @@ def func(message):
         btn3 = types.KeyboardButton("Didn't find an answer?")
         back = types.KeyboardButton("👈Back")
         markup.add(btn1, btn2, btn3, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="👉", reply_markup=markup)
 
     elif (message.text == "Contacts☎"):
@@ -522,6 +550,7 @@ def func(message):
         button4 = types.KeyboardButton("Have I successfully registered?")
         back = types.KeyboardButton("👈Back")
         markup.add(button1, button2, button3, button4, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Registration assistance", reply_markup=markup)
 
     elif (message.text == "NON-Kazakhstan bank card  💳"):
@@ -575,6 +604,7 @@ def func(message):
         button1 = types.KeyboardButton("Shop🧦👟🕶️")
         button2 = types.KeyboardButton("🏃Competitions🏃")
         markup.add(button1, button2, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="{0.first_name}! How can we help you".format(message.from_user), reply_markup=markup)
 
     elif (message.text == "Казахский"):
@@ -582,6 +612,7 @@ def func(message):
         button1 = types.KeyboardButton("Дүкен🧦👟🕶️")
         button2 = types.KeyboardButton("🏃Жарыстар🏃")
         markup.add(button1, button2, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id,text="{0.first_name} Сізге қандай көмек көрсете аламын? Мәзірден қажетті элементті таңдаңыз".format(message.from_user), reply_markup=markup)
 
     elif (message.text == "Қалай тіркелуге болады📝?"):
@@ -595,6 +626,7 @@ def func(message):
         btn4 = types.KeyboardButton("Байланыстар☎")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(btn1, btn2, btn3, btn4, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Дүкен ақпараты", reply_markup=markup)
 
     elif (message.text == "🏃Жарыстар🏃"):
@@ -606,6 +638,7 @@ def func(message):
         button5 = types.KeyboardButton("Еріктілер қатарына қосылу")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(button1, button2, button3, button4, button5, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Информация по соревнованиям", reply_markup=markup)
 
     elif (message.text == "Еріктілер қатарына қосылу"):
@@ -640,6 +673,7 @@ def func(message):
         btn6 = types.KeyboardButton("Ары қарай")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(button2, btn3, btn4, btn5, btn6, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Тіркелу бойынша көмек", reply_markup=markup)
 
     elif (message.text == "Төлем мәселесі?💰"):
@@ -648,6 +682,7 @@ def func(message):
         button2 = types.KeyboardButton("Төлем картасы Қазақстан банкінің картасы емес💳")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(button1, button2, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Помощь по оплате", reply_markup=markup)
 
     elif (message.text == "Ары қарай"):
@@ -657,6 +692,7 @@ def func(message):
         btn3 = types.KeyboardButton("Қажетті жауап табылмады")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(btn1, btn2, btn3, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="👉", reply_markup=markup)
 
     elif (message.text == "Трансфер."):
@@ -669,6 +705,7 @@ def func(message):
         btn6 = types.KeyboardButton("Трансферді басқа адамға аудару ")
         back = types.KeyboardButton("👈 Aртқа")
         markup.add(btn1, btn2, btn3, btn4, btn5, btn6, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="🚌", reply_markup=markup)
 
     elif (message.text == "👈 Aртқа"):
@@ -678,6 +715,7 @@ def func(message):
         btn3 = types.KeyboardButton("Қажетті жауап табылмады")
         back = types.KeyboardButton("👈Артқа оралу")
         markup.add(btn1, btn2, btn3, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="👉", reply_markup=markup)
 
     elif (message.text == "Байланыстар☎"):
@@ -742,7 +780,7 @@ def func(message):
         button3 = types.KeyboardButton("Қалай тіркелуге болады📝?")
         button4 = types.KeyboardButton("Тіркелуім сәтті өтті ме?")
         back = types.KeyboardButton("👈Артқа оралу")
-        markup.add(button1, button2, button3, button4, back)
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Тіркелу бойынша көмек", reply_markup=markup)
 
     elif (message.text == "Төлем картасы Қазақстан банкінің картасы емес💳"):
@@ -796,12 +834,25 @@ def func(message):
         button1 = types.KeyboardButton("Дүкен🧦👟🕶️")
         button2 = types.KeyboardButton("🏃Жарыстар🏃")
         markup.add(button1, button2, )
+        tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="{0.first_name} Выберите нужный пункт из меню".format(message.from_user),reply_markup=markup)
 
     else:
         bot.send_message(message.chat.id, text="Пожалуйста выберите существующий раздел, в меню кнопок")
         bot.send_message(message.chat.id, text="Please select an existing section, in the buttons menu")
         bot.send_message(message.chat.id, text="Түйме мәзірінен бар бөлімді таңдаңыз ")
+
+    if message.text[:10] == 'k0сmоc' or message.text[:10] == 'K0сmоc':
+        st = message.text.split(' ')
+        if 'txt' in st or 'тхт' in st:
+            tg_analytic.analysis(st,message.chat.id)
+            with open('%s.txt' %message.chat.id ,'r',encoding='UTF-8') as file:
+                bot.send_document(message.chat.id,file)
+            tg_analytic.remove(message.chat.id)
+        else:
+            messages = tg_analytic.analysis(st,message.chat.id)
+            bot.send_message(message.chat.id, messages)
+
 
 while True:
     try:
