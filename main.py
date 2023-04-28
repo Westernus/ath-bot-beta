@@ -1,3 +1,5 @@
+import time
+
 import telebot
 from telebot import types
 import tg_analytic
