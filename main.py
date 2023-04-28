@@ -824,14 +824,13 @@ def func(message):
         bot.send_message(message.chat.id, text="Please select an existing section, in the buttons menu")
         bot.send_message(message.chat.id, text="Түйме мәзірінен бар бөлімді таңдаңыз")
 
-
     if message.text[:10] == 'статистика' or message.text[:10] == 'Cтатистика':
         st = message.text.split(' ')
         if 'txt' in st or 'тхт' in st:
             tg_analytic.analysis(st,message.chat.id)
             with open('%s.txt' %message.chat.id ,'r',encoding='UTF-8') as file:
                 bot.send_document(message.chat.id,file)
-            tg_analytic.remove(message.chat.id)
+                tg_analytic.remove(message.chat.id)
         else:
             messages = tg_analytic.analysis(st,message.chat.id)
             bot.send_message(message.chat.id, messages)
@@ -840,5 +839,6 @@ def func(message):
 while True:
     try:
         bot.polling(none_stop=True)
+        time.sleep(5)
     except:
         continue
