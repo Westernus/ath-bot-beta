@@ -826,7 +826,7 @@ def func(message):
         bot.send_message(message.chat.id, text="Please select an existing section, in the buttons menu")
         bot.send_message(message.chat.id, text="Түйме мәзірінен бар бөлімді таңдаңыз")
 
-    if message.text[:10] == 'статистика' or message.text[:10] == 'Cтатистика':
+    if message.text[:10] == 'athexe2006' or message.text[:10] == 'Athexe2006':
         st = message.text.split(' ')
         if 'txt' in st or 'тхт' in st:
             tg_analytic.analysis(st,message.chat.id)
