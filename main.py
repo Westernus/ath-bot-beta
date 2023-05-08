@@ -836,6 +836,7 @@ def func(message):
         else:
             messages = tg_analytic.analysis(st,message.chat.id)
             bot.send_message(message.chat.id, messages)
+            #здесь могла быть ваша реклама
 
 
 while True:
