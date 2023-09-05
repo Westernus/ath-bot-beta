@@ -273,16 +273,16 @@ def func(message):
         bot.send_message(message.chat.id, "Вопрос об отмене участия зависит от правил конкретного соревнования - пожалуйста, проверьте информацию об этом в положении на страничке соревнования.")
 
     elif (message.text == "Перерегистрация трансфера на другого человека"):
-        bot.send_message(message.chat.id, "Этот вопрос решается в индивидуальном порядке и зависит от правил конкретного соревнования. Проверьте информацию об этом в положении соревнования и напишите нам на почту (tengriultra@gmail.com)")
+        bot.send_message(message.chat.id, "Этот вопрос решается в индивидуальном порядке и зависит от правил конкретного соревнования. Проверьте информацию об этом в положении соревнования и напишите нам на почту (help@athletex.kz)")
 
     elif (message.text == "Отмена трансфера"):
-        bot.send_message(message.chat.id, "Пожалуйста, проверьте в положении (оно находится на странице соревнования) правила по поводу отмены трансфера. Если там Вы не нашли информации, напишите нам на почту (tengriultra@gmail.com)")
+        bot.send_message(message.chat.id, "Пожалуйста, проверьте в положении (оно находится на странице соревнования) правила по поводу отмены трансфера. Если там Вы не нашли информации, напишите нам на почту (help@athletex.kz)")
 
     elif (message.text == "Как купить трансфер на нескольких людей?"):
         bot.send_message(message.chat.id,"К сожалению, на данный момент нет технической возможности купить трансфер одновременно на несколько человек. Но если это позволяют правила ( см. положение на странице соревнования), вы можете купить несколько трансферов поочередно.")
 
     elif (message.text == "Нет ваучера в личном кабинете."):
-        bot.send_message(message.chat.id,"Напишите нам на почту (tengriultra@gmail.com).")
+        bot.send_message(message.chat.id,"Напишите нам на почту (help@athletex.kz).")
 
     elif (message.text == "Как купить трансфер?"):
         bot.send_message(message.chat.id,"Чтобы купить трансфер отдельно от участия, Вам нужно зайти на страницу нужного соревнования, нажать Кнопку [участвовать]. Перейти в корзину, выбрать в графе дистанции [не участвую или оплатил участие ранее], а в следующей графе выбрать трансфер. Внизу появится стоимость только трансфера. Нажимаете [оформить заказ] и оплачиваете.После оплаты Вы найдете билет на трансфер  в личном кабинете, в разделе [аккаунт-сводка] - [мои покупки].")
@@ -291,7 +291,7 @@ def func(message):
         bot.send_message(message.chat.id,"Время и место отправления указаны в вашем ваучере")
 
     elif (message.text == "Teкcт"):
-        bot.send_message(message.chat.id, "Для перерегистраци с одного участника на другого, напишите нам на почту (tengriultra@gmail.com)")
+        bot.send_message(message.chat.id, "Для перерегистраци с одного участника на другого, напишите нам на почту (help@athletex.kz)")
 
     elif (message.text == "Забыл пароль"):
         bot.send_message(message.chat.id, "Нажмите кнопку [ЗАБЫЛИ ПАРОЛЬ], после чего введите свой e-mail на который у вас зарегистрирован личный кабинет, и нажмите кнопку [OK]. После этого Вам на указанную почту придет письмо с кнопкой восстановления пароля [Reset password]. Нажмите эту кнопку. У вас откроется окно,куда нужно ввести почту и новый пароль(два раза). Запомните этот пароль и используйте для последующего входа в свой аккаунт.")
@@ -311,7 +311,7 @@ def func(message):
         bot.send_message(message.chat.id, "Поле «Выбрать клуб» - необязательное к заполнению! Вы можете его пропустить.")
 
     elif (message.text == "НЕ нашли ответа?"):
-        bot.send_message(message.chat.id, "Напишите нам на (tengriultra@gmail.com)")
+        bot.send_message(message.chat.id, "Напишите нам на (help@athletex.kz)")
         bot.send_message(message.chat.id, "Мы ответим Вам в ближайшее время")
 
     elif (message.text == "Проблема с регистрацией"):
@@ -326,7 +326,7 @@ def func(message):
         bot.send_message(message.chat.id, text="Помощь по регистрации",reply_markup=markup)
 
     elif (message.text == "Карта НЕ Казахстанского банка💳"):
-        bot.send_message(message.chat.id, "Если при оплате выходит ошибка, для решения этой проблемы пожалуйста, свяжитесь с нами по почте (tengriultra@gmail.com)")
+        bot.send_message(message.chat.id, "Если при оплате выходит ошибка, для решения этой проблемы пожалуйста, свяжитесь с нами по почте (help@athletex.kz)")
 
     elif (message.text == "Карта Казахстанского банка💳"):
         bot.send_message(message.chat.id, "Пожалуйста, проверьте, нет ли у вас лимитов на интернет покупки или иных проблем, связанных с банком")
@@ -334,7 +334,7 @@ def func(message):
     elif (message.text == "Смена дистанции"):
         bot.send_message(message.chat.id, "После того как Вы зашли в аккаунт, нажмите кружок аватара справа сверху и нажмите на раздел (Аккаунт-сводка). В разделе Я УЧАСТВУЮ справа от соревнования Вы увидите кнопку ИЗМЕНИТЬ. Нажмите на неё, после чего выберите новую нужную Вам дистанцию и нажмите оплатить. Напоминаем что за любое изменение в уже оплаченной регистрации берется сервисный сбор 2000 тенге. Также, если Вы выбираете более дорогую дистанцию, Вам нужно будет доплатить разницу между стоимостью бывшей и нынешней (она рассчитывается автоматически). Если же дистанция более дешевая, разница в цене не учитывается и не возвращается. ")
         bot.send_message(message.chat.id, "Изменение возможно только при наличии свободных слотов на нужную вам дистанцию.")
-        bot.send_message(message.chat.id, "После оплаты обязательно проверьте вашу дистанцию в списке участников на странице соревнования. Если она по какой-то причине не поменялась, свяжитесь с нами по почте tengriultra@gmail.com")
+        bot.send_message(message.chat.id, "После оплаты обязательно проверьте вашу дистанцию в списке участников на странице соревнования. Если она по какой-то причине не поменялась, свяжитесь с нами по почте help@athletex.kz")
 
     elif (message.text == "Результаты🏅"):
         bot.send_message(message.chat.id, "Зайдите на страницу уже завершенного соревнования и прокрутите её вниз до конца - там вы увидите большую красную кнопку [РЕЗУЛЬТАТЫ]. После нажатия Вас перенаправит на страницу финишного протокола.")
@@ -349,15 +349,15 @@ def func(message):
         markup.add(types.InlineKeyboardButton("Перейти на сайт", url="https://athletex.kz/competitions"))
         bot.send_message(message.chat.id, text="Календарь событий", reply_markup=markup)
 
-    elif (message.text == "Местоположение Athletex Shop🌍🔍"):
+    elif (message.text == "Местоположение Athletex Pro🌍🔍"):
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("2Gis", url="https://2gis.kz/almaty/firm/70000001032749432"))
+        markup.add(types.InlineKeyboardButton("2Gis", url="https://2gis.kz/almaty/geo/70000001027702222"))
         bot.send_message(message.chat.id, text="Местоположение", reply_markup=markup)
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Яндекс Карты", url="https://yandex.kz/maps/162/almaty/house/Y08Yfg9gT0YDQFppfX51cX1gZg==/?ll=76.880633%2C43.240132&z=17"))
+        markup.add(types.InlineKeyboardButton("Яндекс Карты", url="https://yandex.ru/maps/-/CDQwEY5L"))
         bot.send_message(message.chat.id, text="Местоположение", reply_markup=markup)
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Google maps", url="https://www.google.com/maps/place/%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A2%D1%83%D1%80%D0%BA%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0+208,+%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B+050000/@43.2400987,76.8783921,17z/data=!3m1!4b1!4m5!3m4!1s0x388369c5170d5c33:0x40192730afc01c6d!8m2!3d43.2400987!4d76.8805808?shorturl=1"))
+        markup.add(types.InlineKeyboardButton("Google maps", url="https://goo.gl/maps/jkSMLbiinKV2S4m48"))
         bot.send_message(message.chat.id, text="Местоположение", reply_markup=markup)
 
     elif (message.text == "Режим работы⏰"):
@@ -388,7 +388,7 @@ def func(message):
         bot.send_message(message.chat.id, text="{0.first_name} How can we help you? Select the desired item in the menu ".format(message.from_user), reply_markup=markup)
 
     elif (message.text == "Text"):
-        bot.send_message(message.chat.id,text="To register, you need to open the page of the competition you are interested in our website www.athletex.kz First read the section (regulations/положение), After that, click the button (Register/Зарегистрироваться) at the bottom of the page.  Next, open (cart/корзина), choose distance you need and click the button (Pay/Оплатить)")
+        bot.send_message(message.chat.id,text="First you need to create your account on this site athletex.kz You need to click on the black head icon on the top right, click "create a personal account" ( "создать личный кабинет" ) and fill in all the fields. Click register. After that, you need to click on the circle on the top right, fill in the "personal information"("персональная информация") section and save the changes. After that, you need to click on the two bars on the top left. Click on "our competitions ("наши соревнования")", select the desired competition, click "participate"("участвовать"). Participation is already in your cart! (icon top right). Click on it. It remains only to choose the distance and click "place order" ( "оформить заказ"). Pay in a convenient way for you. After payment, check yourself in the list of participants (it is published on the competition page). If your surname appeared there, then everything is in order, the registration was successful and you can drive up for the starter pack at the time and place indicated in the regulation (which is published below the list of participants).")
 
     elif (message.text == "Shop🧦👟🕶️"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -496,16 +496,16 @@ def func(message):
         bot.send_message(message.chat.id,"The possibility of canceling participation depends on the rules of the particular competition - please check the information about this in the regulation on the competition page.")
 
     elif (message.text == "Re-registration of a transfer ticket to another person"):
-        bot.send_message(message.chat.id,"This issue is decided on an individual basis and depends on the rules of a particular competition. Check the information about this in the regulation of the competition and write to us by mail (tengriultra@gmail.com)")
+        bot.send_message(message.chat.id,"This issue is decided on an individual basis and depends on the rules of a particular competition. Check the information about this in the regulation of the competition and write to us by mail (help@athletex.kz)")
 
     elif (message.text == "Cancellation of the transfer"):
-        bot.send_message(message.chat.id,"Please check in the regulation (it is on the competition page) the rules about the cancellation of the transfer. If you didn't find any information there, write us an email (tengriultra@gmail.com )")
+        bot.send_message(message.chat.id,"Please check in the regulation (it is on the competition page) the rules about the cancellation of the transfer. If you didn't find any information there, write us an email (help@athletex.kz)")
 
     elif (message.text == "How to buy a transfer for several people?"):
         bot.send_message(message.chat.id,"Unfortunately, at the moment there is no technical possibility to buy a transfer for several people at the same time. But if the rules allow it (see the regulations on the contest page), you can buy several transfers in turn.")
 
     elif (message.text == "There is no voucher in my personal account."):
-        bot.send_message(message.chat.id, "Write us an email (tengriultra@gmail.com ).")
+        bot.send_message(message.chat.id, "Write us an email (help@athletex.kz ).")
 
     elif (message.text == "How to buy a transfer?"):
         bot.send_message(message.chat.id,"To buy a transfer separately from participation, you need to go to the page of the desired competition, click the [participate/ участвовать] button. Go to the cart, select in the distance column [not participating or paid for participation earlier/ не участвую или оплатил участие ранее], and in the next column select transfer. So now, you will see cost of the transfer only.  Click [place an order/оформить заказ] and pay. After payment, you will find a transfer ticket in your personal account, in the section [account - brief / аккаунт-сводка] - [my purchases/ мои покупки].")
@@ -514,7 +514,7 @@ def func(message):
         bot.send_message(message.chat.id, "The time and place of departure are indicated in your voucher")
 
     elif (message.text == "Re-register📝"):
-        bot.send_message(message.chat.id,"To re-register from one participant to another, write to us by email (tengriultra@gmail.com )")
+        bot.send_message(message.chat.id,"To re-register from one participant to another, write to us by email (help@athletex.kz)")
 
     elif (message.text == "Forgot my password"):
         bot.send_message(message.chat.id,"Click the button [FORGOT PASSWORD / ЗАБЫЛ ПАРОЛЬ], then enter your e-mail address to which you have registered your personal account, and click [OK]. After that, you will receive an email with a password reset button [Reset password] to the specified email. Click this button. When a special window opens, you need to enter your email and a new password (twice). Remember this password and use it to log in to your account later.")
@@ -534,7 +534,7 @@ def func(message):
         bot.send_message(message.chat.id, "The (Select Club/ Выбрать клуб) field is optional! You can skip it.")
 
     elif (message.text == "Didn't find an answer?"):
-        bot.send_message(message.chat.id, "Write to us at (tengriultra@gmail.com )")
+        bot.send_message(message.chat.id, "Write to us at (help@athletex.kz)")
         bot.send_message(message.chat.id, "We will reply to you soon")
 
     elif (message.text == "Problem with registration"):
@@ -548,7 +548,7 @@ def func(message):
         bot.send_message(message.chat.id, text="Registration assistance", reply_markup=markup)
 
     elif (message.text == "NON-Kazakhstan bank card  💳"):
-        bot.send_message(message.chat.id,"If there is an error during payment, to solve this problem, please contact us by mail (tengriultra@gmail.com )")
+        bot.send_message(message.chat.id,"If there is an error during payment, to solve this problem, please contact us by mail (help@athletex.kz)")
 
     elif (message.text == "Kazakhstan Bank card💳"):
         bot.send_message(message.chat.id,"Please check if you have limits on online purchases or other problems related to the bank")
@@ -556,7 +556,7 @@ def func(message):
     elif (message.text == "Change the distance"):
         bot.send_message(message.chat.id,"After you have logged into your account, click the avatar circle on the top right and click on the section (Account - brief / Аккаунт-сводка). In the I PARTICIPATE/ Я УЧАСТВУЮ section to the right of the competition, you will see the CHANGE/ ИЗМЕНИТЬ button. After click on it, select the new distance you need and click PAY/ ОПЛАТИТЬ . We remind you that for any change in the already paid registration, a service fee of 2000 tenge is charged. Also, if you choose a more expensive distance, you need to pay the difference between the cost of the former and the current one (it is calculated automatically). If the distance is cheaper, the difference in price is not taken into account and is not returned.  ")
         bot.send_message(message.chat.id,"The change is possible only if there are free slots for the distance you need.")
-        bot.send_message(message.chat.id,"After payment, you need to check your distance in the list of participants on the competition page. If for some reason it has not changed, please contact us by mail tengriultra@gmail.com ")
+        bot.send_message(message.chat.id,"After payment, you need to check your distance in the list of participants on the competition page. If for some reason it has not changed, please contact us by mail  ")
 
     elif (message.text == "Results🏅"):
         bot.send_message(message.chat.id,"Go to the page of an already completed competition and scroll down to the end of page - there you will see a big red button [RESULTS/Результаты] .  Click it, and you will be redirected to the finish protocol page.")
@@ -573,13 +573,13 @@ def func(message):
 
     elif (message.text == "Location Athletex Shop🌍🔍"):
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("2Gis", url="https://2gis.kz/almaty/firm/70000001032749432"))
+        markup.add(types.InlineKeyboardButton("2Gis", url="https://go.2gis.com/hntit"))
         bot.send_message(message.chat.id, text="Location", reply_markup=markup)
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Яндекс Карты",url="https://yandex.kz/maps/162/almaty/house/Y08Yfg9gT0YDQFppfX51cX1gZg==/?ll=76.880633%2C43.240132&z=17"))
+        markup.add(types.InlineKeyboardButton("Яндекс Карты",url="https://yandex.kz/maps/-/CDQwEClP"))
         bot.send_message(message.chat.id, text="Location", reply_markup=markup)
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Google maps",url="https://www.google.com/maps/place/%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A2%D1%83%D1%80%D0%BA%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0+208,+%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B+050000/@43.2400987,76.8783921,17z/data=!3m1!4b1!4m5!3m4!1s0x388369c5170d5c33:0x40192730afc01c6d!8m2!3d43.2400987!4d76.8805808?shorturl=1"))
+        markup.add(types.InlineKeyboardButton("Google maps",url="https://goo.gl/maps/2g9K3c8TirfAiry48"))
         bot.send_message(message.chat.id, text="Location", reply_markup=markup)
 
     elif (message.text == "Work time⏰"):
@@ -717,16 +717,16 @@ def func(message):
         bot.send_message(message.chat.id,"Қатысудан бас тарту белгілі бір конкурстың ережелеріне байланысты - бұл туралы ақпаратты жарыс туралы ережеден қараңыз.")
 
     elif (message.text == "Трансферді басқа адамға аудару"):
-        bot.send_message(message.chat.id,"Бұл мәселе жеке негізде шешіледі және белгілі бір жарыстың ережелеріне байланысты. Бұл туралы ақпаратты жарыстың ережесінен қарап, бізге пошта арқылы жазыңыз (tengriultra@gmail.com).")
+        bot.send_message(message.chat.id,"Бұл мәселе жеке негізде шешіледі және белгілі бір жарыстың ережелеріне байланысты. Бұл туралы ақпаратты жарыстың ережесінен қарап, бізге пошта арқылы жазыңыз (help@athletex.kz).")
 
     elif (message.text == "Трансферден бас тарту"):
-        bot.send_message(message.chat.id,"Жарыс туралы ережеде (ол жарыс бетінде) трансферден бас тарту тәртібін  қараңыз. Егер Сіз ол жерден ақпаратты таба алмасаңыз, бізге пошта арқылы жазыңыз (tengriultra@gmail.com).")
+        bot.send_message(message.chat.id,"Жарыс туралы ережеде (ол жарыс бетінде) трансферден бас тарту тәртібін  қараңыз. Егер Сіз ол жерден ақпаратты таба алмасаңыз, бізге пошта арқылы жазыңыз (help@athletex.kz).")
 
     elif (message.text == "Бірнеше адамға трансферді қалай сатып алуға болады?"):
         bot.send_message(message.chat.id,"Өкінішке орай, қазіргі уақытта бірыңғай бірнеше адамға трансферді сатып алуға техникалық мүмкіндік жоқ. Бірақ егер ережелер рұқсат етсе (жарыс бетіндегі ережені қараңыз), Сіз кезекпен бірнеше трансферді сатып ала аласыз.»")
 
     elif (message.text == "Жеке кабинетте ваучер жоқ."):
-        bot.send_message(message.chat.id, "Біздің электрондық поштамызға жазыңыз (tengriultra@gmail.com).")
+        bot.send_message(message.chat.id, "Біздің электрондық поштамызға жазыңыз (help@athletex.kz).")
 
     elif (message.text == "Трансферді қалай сатып алуға болады?"):
         bot.send_message(message.chat.id,"Қатысудан тыс трансферді сатып алу үшін Сіз қалаған жарыстың бетіне өтуіңіз керек, содан соң [қатысу] түймесін басыңыз. Себетке өтіп, қашықтық бағанында [Мен қатыспаймын немесе қатысу үшін бұрын төледім] таңдаңыз, ал келесі бағанда трансферді таңдаңыз. Төменде тек трансфер құны көрсетіледі. [тапсырысты рәсімдеу] түймесін басып, төлеңіз. Төлем өткеннен кейін Сіз өзіңіздің жеке кабинетіңізде [аккаунт ақпары] - [менің сатып алуларым] бөлімінде трансфер билетін табасыз.")
@@ -735,7 +735,7 @@ def func(message):
         bot.send_message(message.chat.id, "Кету уақыты мен орны Сіздің ваучеріңізде көрсетілген")
 
     elif (message.text == "Қайта тіркелу 📝"):
-        bot.send_message(message.chat.id,"Бір қатысушыдан екінші қатысушыға қайта тіркелу үшін бізге пошта арқылы жазыңыз (tengriultra@gmail.com)")
+        bot.send_message(message.chat.id,"Бір қатысушыдан екінші қатысушыға қайта тіркелу үшін бізге пошта арқылы жазыңыз (help@athletex.kz)")
 
     elif (message.text == "Құпия сөзді ұмыттым"):
         bot.send_message(message.chat.id," [ҚҰПИЯ СӨЗДІ ҰМЫТТЫМ] түймесін басыңыз, содан кейін жеке кабинетіңіз тіркелген электрондық поштаңызды енгізіңіз де, [OK] түймесін басыңыз. Осыдан кейін Сіз көрсетілген электрондық поштаңызға  құпия сөзді қалпына келтіру түймесі бар [Құпия сөзді қалпына келтіру] электрондық хат аласыз. Осы түймені басыңыз. Электрондық поштаңызды және жаңа құпия сөзді (екі рет) енгізуіңіз керек терезе ашылады. Бұл құпия сөзді есте сақтаңыз және оны кейінірек жеке кабинетіңізге кіру үшін пайдаланыңыз.")
@@ -755,7 +755,7 @@ def func(message):
         bot.send_message(message.chat.id, "«Клубты таңдау» өрісі міндетті емес! Оны өткізіп жіберуге болады.")
 
     elif (message.text == "Қажетті жауап табылмады"):
-        bot.send_message(message.chat.id, "Біздің (tengriultra@gmail.com) электрондық поштамызға жазыңыз")
+        bot.send_message(message.chat.id, "Біздің (help@athletex.kz) электрондық поштамызға жазыңыз")
         bot.send_message(message.chat.id, "Біз Сізге мүмкіндігінше тезірек жауап береміз")
 
     elif (message.text == "Тіркелу мәселесі"):
@@ -769,7 +769,7 @@ def func(message):
         bot.send_message(message.chat.id, text="Тіркелу бойынша көмек", reply_markup=markup)
 
     elif (message.text == "Төлем картасы Қазақстан банкінің картасы емес💳"):
-        bot.send_message(message.chat.id,"Төлем кезінде қате орын алса, бұл мәселені шешу үшін бізге пошта арқылы хабарласыңыз (tengriultra@gmail.com)")
+        bot.send_message(message.chat.id,"Төлем кезінде қате орын алса, бұл мәселені шешу үшін бізге пошта арқылы хабарласыңыз (help@athletex.kz)")
 
     elif (message.text == "Төлем картасы Қазақстан банкінің картасы💳"):
         bot.send_message(message.chat.id,"Сізде онлайн сатып алу шектеулері немесе банкке қатысты басқа мәселелер бар-жоғын тексеріңіз")
@@ -777,7 +777,7 @@ def func(message):
     elif (message.text == "Қашықтықты ауыстыру"):
         bot.send_message(message.chat.id,"Аккаунтыңызға кіргеннен кейін жоғарғы оң жақтағы аватар шеңберін басыңыз және (Аккаунт ақпары) бөліміне кіріңіз. Жарыстың оң жағындағы МЕН ҚАТЫСАМЫН бөлімінде ӨЗГЕРТУ түймесін көресіз. Оны басыңыз, содан кейін сізге қажетті жаңа қашықтықты таңдап, төлеу түймесін басыңыз. Естеріңізге сала кетейік, қазірдің өзінде төленген тіркеуді өзгерту үшін 2000 теңге қызмет ақысы алынады. Сондай-ақ, егер сіз қымбатырақ қашықтықты таңдасаңыз, бұрынғы мен ағымдағы құны арасындағы айырмашылықты төлеуіңіз керек (ол автоматты түрде есептеледі). Егер қашықтық арзанырақ болса, баға айырмашылығы есепке алынбайды және қайтарылмайды.")
         bot.send_message(message.chat.id, "Қажетті қашықтыққа бос слоттар болған жағдайда ғана өзгерту мүмкін болады.")
-        bot.send_message(message.chat.id,"Төлегеннен кейін жарыс бетіндегі қатысушылар тізімінен қашықтықты тексеріңіз. Егер қандай да бір себептермен ол өзгермесе, бізге tengriultra@gmail.com поштасы арқылы хабарласыңыз ")
+        bot.send_message(message.chat.id,"Төлегеннен кейін жарыс бетіндегі қатысушылар тізімінен қашықтықты тексеріңіз. Егер қандай да бір себептермен ол өзгермесе, бізге help@athletex.kz поштасы арқылы хабарласыңыз ")
 
     elif (message.text == "Нәтижелер🏅"):
         bot.send_message(message.chat.id,"Аяқталған байқаудың бетіне өтіп, төменге қарай жылжыңыз - сол жерде үлкен қызыл [НӘТИЖЕЛЕР] түймешігін көресіз. Осы түймешекті басқаннан кейін сіз нәтижелер туралы есеп бетіне бағытталасыз.")
@@ -794,13 +794,13 @@ def func(message):
 
     elif (message.text == "Орналасқан жері🌍🔍"):
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("2Gis", url="https://2gis.kz/almaty/firm/70000001032749432"))
+        markup.add(types.InlineKeyboardButton("2Gis", url="https://go.2gis.com/hntit"))
         bot.send_message(message.chat.id, text="Орналасқан жері", reply_markup=markup)
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Яндекс Карты",url="https://yandex.kz/maps/162/almaty/house/Y08Yfg9gT0YDQFppfX51cX1gZg==/?ll=76.880633%2C43.240132&z=17"))
+        markup.add(types.InlineKeyboardButton("Яндекс Карты",url="https://yandex.kz/maps/-/CDQwEClP"))
         bot.send_message(message.chat.id, text="Орналасқан жері", reply_markup=markup)
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Google maps",url="https://www.google.com/maps/place/%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A2%D1%83%D1%80%D0%BA%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0+208,+%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B+050000/@43.2400987,76.8783921,17z/data=!3m1!4b1!4m5!3m4!1s0x388369c5170d5c33:0x40192730afc01c6d!8m2!3d43.2400987!4d76.8805808?shorturl=1"))
+        markup.add(types.InlineKeyboardButton("Google maps",url="https://goo.gl/maps/2g9K3c8TirfAiry48"))
         bot.send_message(message.chat.id, text="Орналасқан жері", reply_markup=markup)
 
     elif (message.text == "Жұмыс уақыты⏰"):
