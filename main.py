@@ -135,12 +135,9 @@ def func(message):
 
     elif (message.text == "Магазин🧦👟🕶️"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("Магазин Athletex Shop")
-        btn2 = types.KeyboardButton("Режим работы⏰")
         btn3 = types.KeyboardButton("Местоположение Athletex Shop🌍🔍")
-        btn4 = types.KeyboardButton("Контакты☎")
         back = types.KeyboardButton("👈Вернуться назад")
-        markup.add(btn1, btn2, btn3, btn4, back)
+        markup.add(btn3, back)
         tg_analytic.statistics(message.chat.id, message.text)
         bot.send_message(message.chat.id, text="Информация по магазину", reply_markup=markup)
 
@@ -339,11 +336,6 @@ def func(message):
     elif (message.text == "Результаты🏅"):
         bot.send_message(message.chat.id, "Зайдите на страницу уже завершенного соревнования и прокрутите её вниз до конца - там вы увидите большую красную кнопку [РЕЗУЛЬТАТЫ]. После нажатия Вас перенаправит на страницу финишного протокола.")
 
-    elif (message.text == "Магазин Athletex Shop"):
-        markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Перейти на сайт", url="https://athletex.kz/shop"))
-        bot.send_message(message.chat.id, text="Магазин спорт товаров Athletex Shop",reply_markup=markup)
-
     elif (message.text == "Календарь🗓"):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("Перейти на сайт", url="https://athletex.kz/competitions"))
@@ -392,12 +384,9 @@ def func(message):
 
     elif (message.text == "Shop🧦👟🕶️"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("Athletex Shop")
-        btn2 = types.KeyboardButton("Work time⏰")
         btn3 = types.KeyboardButton("Location Athletex Shop🌍🔍")
-        btn4 = types.KeyboardButton("Contacts☎")
         back = types.KeyboardButton("👈Back")
-        markup.add(btn1, btn2, btn3, btn4, back)
+        markup.add(btn3, back)
         bot.send_message(message.chat.id, text="Shop Information", reply_markup=markup)
 
     elif (message.text == "🏃Competitions🏃"):
@@ -561,10 +550,10 @@ def func(message):
     elif (message.text == "Results🏅"):
         bot.send_message(message.chat.id,"Go to the page of an already completed competition and scroll down to the end of page - there you will see a big red button [RESULTS/Результаты] .  Click it, and you will be redirected to the finish protocol page.")
 
-    elif (message.text == "Athletex Shop"):
-        markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Go to website", url="https://athletex.kz/shop"))
-        bot.send_message(message.chat.id, text="Sports goods store Athletex Shop", reply_markup=markup)
+    #elif (message.text == "Athletex Shop"):
+        #markup = types.InlineKeyboardMarkup()
+        #markup.add(types.InlineKeyboardButton("Go to website", url="https://athletex.kz/shop"))
+        #bot.send_message(message.chat.id, text="Sports goods store Athletex Shop", reply_markup=markup)
 
     elif (message.text == "Calendar�"):
         markup = types.InlineKeyboardMarkup()
@@ -582,10 +571,10 @@ def func(message):
         markup.add(types.InlineKeyboardButton("Google maps",url="https://goo.gl/maps/2g9K3c8TirfAiry48"))
         bot.send_message(message.chat.id, text="Location", reply_markup=markup)
 
-    elif (message.text == "Work time⏰"):
-        photo = open('img2.jpeg', 'rb')
-        bot.send_photo(message.chat.id, photo)
-        bot.send_message(message.chat.id, "Please check the store's opening hours on weekends and holidays in advance.")
+    #elif (message.text == "Work time⏰"):
+        #photo = open('img2.jpeg', 'rb')
+        #bot.send_photo(message.chat.id, photo)
+        #bot.send_message(message.chat.id, "Please check the store's opening hours on weekends and holidays in advance.")
 
     elif (message.text == "Have I successfully registered?"):
         markup = types.InlineKeyboardMarkup()
@@ -612,12 +601,9 @@ def func(message):
 
     elif (message.text == "Дүкен🧦👟🕶️"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("Дүкен Athletex Shop")
-        btn2 = types.KeyboardButton("Жұмыс уақыты⏰")
         btn3 = types.KeyboardButton("Орналасқан жері🌍🔍")
-        btn4 = types.KeyboardButton("Байланыстар☎")
         back = types.KeyboardButton("👈Артқа оралу")
-        markup.add(btn1, btn2, btn3, btn4, back)
+        markup.add(btn3, back)
         bot.send_message(message.chat.id, text="Дүкен ақпараты", reply_markup=markup)
 
     elif (message.text == "🏃Жарыстар🏃"):
@@ -782,10 +768,10 @@ def func(message):
     elif (message.text == "Нәтижелер🏅"):
         bot.send_message(message.chat.id,"Аяқталған байқаудың бетіне өтіп, төменге қарай жылжыңыз - сол жерде үлкен қызыл [НӘТИЖЕЛЕР] түймешігін көресіз. Осы түймешекті басқаннан кейін сіз нәтижелер туралы есеп бетіне бағытталасыз.")
 
-    elif (message.text == "Дүкен Athletex Shop"):
-        markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Перейти на сайт", url="https://athletex.kz/shop"))
-        bot.send_message(message.chat.id, text="Спорт тауарлары дүкені Athletex Shop", reply_markup=markup)
+    #elif (message.text == "Дүкен Athletex Shop"):
+        #markup = types.InlineKeyboardMarkup()
+        #markup.add(types.InlineKeyboardButton("Перейти на сайт", url="https://athletex.kz/shop"))
+        #bot.send_message(message.chat.id, text="Спорт тауарлары дүкені Athletex Shop", reply_markup=markup)
 
     elif (message.text == "Күнтізбе🗓"):
         markup = types.InlineKeyboardMarkup()
